@@ -23,6 +23,8 @@ public class FileAllShow {
         }
     }
     public static void main(String [] args){
+//        String sep = System.getProperty("file.separator");  windows系统上 sep 为 \ (反斜杠)unix系统上 为 /（正斜杠）
+//        System.out.println(sep);
         File my = new File("L:\\ITbook");
         print(my);
     }
