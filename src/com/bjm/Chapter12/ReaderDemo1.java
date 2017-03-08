@@ -17,11 +17,15 @@ import java.io.Reader;
 //
 public class ReaderDemo1 {
     public static void main(String [] args)throws Exception{
-        File f = new File("/home/bjming/java/hello.java");
+//        第一步，使用File类找到一个文件
+        File f = new File("/home/bjming/java/hello.java");//声明File对象
+//        第二步，通过子类实例化父类对象
         Reader input =null;
         input = new FileReader(f);
-        char c[] =new char[1024];
-        int len =input.read(c);
+        //第三步，进行读操作
+        char c[] =new char[1024];//所有的内容都读到此数组中，显然是不现实滴
+        int len =input.read(c);//读取内容
+//        第四步，关闭输入流
         input.close();
         System.out.println("内容为："+new String (c,0,len));
     }
