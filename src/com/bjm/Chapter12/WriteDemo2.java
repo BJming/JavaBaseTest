@@ -23,7 +23,7 @@ public class WriteDemo2 {
         Writer out = null;//准备好一个输出对象
         out = new FileWriter(f, true);//通过对象多态性，进行实例化
 //        第三步，进行写操作
-        String str ="在我心中，最强不过intelliJ.今天就写到这里，明天见";//准备一个字符串
+        String str ="在我心中，最强不过intelliJ.今天就写到这里，明天见";//准备一个字符串  ps：多次运行，发现writer只管写，不覆盖写入前的初始数据
         out.write(str);//将内容输出，保存文件
 //        第四步，关闭输出流
         out.close();//关闭输出流
